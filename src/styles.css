@@ -1,0 +1,397 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Metaglobe Technologies design system.
+ *
+ * Dark-first, enterprise-tech brand built on the BARBAH GAMES visual DNA:
+ * deep navy/black ground, neon orange and electric purple accents, and a
+ * cyan-to-purple gradient family. All colors are authored in oklch.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Brand-specific tokens */
+  --color-orange: var(--orange);
+  --color-purple: var(--purple);
+  --color-cyan: var(--cyan);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-hero-gradient: var(--hero-gradient);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Dark-first foundation */
+  --background: oklch(0.05 0.01 270);
+  --foreground: oklch(0.96 0.01 270);
+  --card: oklch(0.08 0.02 270);
+  --card-foreground: oklch(0.96 0.01 270);
+  --popover: oklch(0.08 0.02 270);
+  --popover-foreground: oklch(0.96 0.01 270);
+
+  --primary: oklch(0.6 0.22 45);
+  --primary-foreground: oklch(0.05 0.01 270);
+  --secondary: oklch(0.55 0.28 300);
+  --secondary-foreground: oklch(0.96 0.01 270);
+  --muted: oklch(0.15 0.02 270);
+  --muted-foreground: oklch(0.65 0.03 270);
+  --accent: oklch(0.75 0.18 210);
+  --accent-foreground: oklch(0.05 0.01 270);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.96 0.01 270);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.55 0.28 300);
+
+  --chart-1: oklch(0.6 0.22 45);
+  --chart-2: oklch(0.55 0.28 300);
+  --chart-3: oklch(0.75 0.18 210);
+  --chart-4: oklch(0.5 0.15 270);
+  --chart-5: oklch(0.7 0.05 270);
+
+  --sidebar: oklch(0.08 0.02 270);
+  --sidebar-foreground: oklch(0.96 0.01 270);
+  --sidebar-primary: oklch(0.6 0.22 45);
+  --sidebar-primary-foreground: oklch(0.05 0.01 270);
+  --sidebar-accent: oklch(0.15 0.02 270);
+  --sidebar-accent-foreground: oklch(0.96 0.01 270);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.55 0.28 300);
+
+  /* Brand accents */
+  --orange: oklch(0.6 0.22 45);
+  --purple: oklch(0.55 0.28 300);
+  --cyan: oklch(0.75 0.18 210);
+  --surface: oklch(0.1 0.02 270);
+  --surface-foreground: oklch(0.96 0.01 270);
+  --hero-gradient: linear-gradient(135deg, oklch(0.75 0.18 210) 0%, oklch(0.55 0.28 300) 100%);
+}
+
+.dark {
+  --background: oklch(0.05 0.01 270);
+  --foreground: oklch(0.96 0.01 270);
+  --card: oklch(0.08 0.02 270);
+  --card-foreground: oklch(0.96 0.01 270);
+  --popover: oklch(0.08 0.02 270);
+  --popover-foreground: oklch(0.96 0.01 270);
+  --primary: oklch(0.6 0.22 45);
+  --primary-foreground: oklch(0.05 0.01 270);
+  --secondary: oklch(0.55 0.28 300);
+  --secondary-foreground: oklch(0.96 0.01 270);
+  --muted: oklch(0.15 0.02 270);
+  --muted-foreground: oklch(0.65 0.03 270);
+  --accent: oklch(0.75 0.18 210);
+  --accent-foreground: oklch(0.05 0.01 270);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.96 0.01 270);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.55 0.28 300);
+  --chart-1: oklch(0.6 0.22 45);
+  --chart-2: oklch(0.55 0.28 300);
+  --chart-3: oklch(0.75 0.18 210);
+  --chart-4: oklch(0.5 0.15 270);
+  --chart-5: oklch(0.7 0.05 270);
+  --sidebar: oklch(0.08 0.02 270);
+  --sidebar-foreground: oklch(0.96 0.01 270);
+  --sidebar-primary: oklch(0.6 0.22 45);
+  --sidebar-primary-foreground: oklch(0.05 0.01 270);
+  --sidebar-accent: oklch(0.15 0.02 270);
+  --sidebar-accent-foreground: oklch(0.96 0.01 270);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.55 0.28 300);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", "Space Grotesk", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter", "Space Grotesk", system-ui, sans-serif;
+  }
+}
+
+@utility text-gradient {
+  background: var(--hero-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility border-gradient {
+  border-image: var(--hero-gradient) 1;
+}
+
+@utility surface-glass {
+  background: color-mix(in oklab, var(--color-surface) 80%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+@utility glow-orange {
+  box-shadow: 0 0 24px color-mix(in oklab, var(--color-orange) 30%, transparent);
+}
+
+@utility glow-purple {
+  box-shadow: 0 0 24px color-mix(in oklab, var(--color-purple) 30%, transparent);
+}
+
+/* =========================================================
+ * Agentic effects — motion + light layers that make the site
+ * feel like a live, thinking system rather than a static page.
+ * ========================================================= */
+
+@keyframes agentic-grid-drift {
+  0%   { background-position: 0 0, 0 0; }
+  100% { background-position: 60px 60px, 60px 60px; }
+}
+@keyframes agentic-scan {
+  0%   { transform: translateY(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+@keyframes agentic-particle-rise {
+  0%   { transform: translate3d(0, 110vh, 0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translate3d(0, -10vh, 0); opacity: 0; }
+}
+@keyframes agentic-pulse-ring {
+  0%   { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes agentic-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes agentic-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.agentic-bg {
+  --agent-x: 50vw;
+  --agent-y: 30vh;
+}
+
+.agentic-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-cyan) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-purple) 8%, transparent) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  animation: agentic-grid-drift 24s linear infinite;
+  opacity: 0.35;
+}
+
+.agentic-aurora {
+  background:
+    radial-gradient(600px circle at var(--agent-x) var(--agent-y),
+      color-mix(in oklab, var(--color-purple) 22%, transparent),
+      transparent 60%),
+    radial-gradient(400px circle at calc(var(--agent-x) + 120px) calc(var(--agent-y) - 80px),
+      color-mix(in oklab, var(--color-cyan) 18%, transparent),
+      transparent 60%);
+  transition: background 120ms linear;
+  mix-blend-mode: screen;
+}
+
+.agentic-scan {
+  background: linear-gradient(90deg,
+    transparent,
+    color-mix(in oklab, var(--color-cyan) 60%, transparent),
+    color-mix(in oklab, var(--color-purple) 60%, transparent),
+    transparent);
+  box-shadow: 0 0 24px color-mix(in oklab, var(--color-cyan) 50%, transparent);
+  animation: agentic-scan 9s linear infinite;
+}
+
+.agentic-particles span {
+  position: absolute;
+  left: calc((var(--i) * 5.5%) + 2%);
+  width: 3px;
+  height: 3px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--color-cyan) 80%, white);
+  box-shadow: 0 0 12px color-mix(in oklab, var(--color-cyan) 70%, transparent);
+  animation: agentic-particle-rise linear infinite;
+  animation-duration: calc(14s + (var(--i) * 0.9s));
+  animation-delay: calc(var(--i) * -1.3s);
+  opacity: 0.6;
+}
+.agentic-particles span:nth-child(3n) {
+  background: color-mix(in oklab, var(--color-purple) 80%, white);
+  box-shadow: 0 0 12px color-mix(in oklab, var(--color-purple) 70%, transparent);
+}
+.agentic-particles span:nth-child(5n) {
+  background: color-mix(in oklab, var(--color-orange) 80%, white);
+  box-shadow: 0 0 12px color-mix(in oklab, var(--color-orange) 60%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agentic-grid,
+  .agentic-scan,
+  .agentic-particles span { animation: none; }
+}
+
+/* Live "agent online" pulse ring — wrap any status dot */
+@utility agent-pulse {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 9999px;
+    border: 1px solid color-mix(in oklab, var(--color-cyan) 70%, transparent);
+    animation: agentic-pulse-ring 2.4s ease-out infinite;
+  }
+  &::after { animation-delay: 1.2s; }
+}
+
+/* Holographic text shimmer for headings */
+@utility text-holographic {
+  background: linear-gradient(
+    90deg,
+    var(--color-foreground) 0%,
+    color-mix(in oklab, var(--color-cyan) 85%, white) 25%,
+    color-mix(in oklab, var(--color-purple) 85%, white) 50%,
+    color-mix(in oklab, var(--color-orange) 85%, white) 75%,
+    var(--color-foreground) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: agentic-shimmer 6s linear infinite;
+}
+
+/* Rotating orbit ring — e.g. around avatars, icons */
+@utility agent-orbit {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    border: 1px dashed color-mix(in oklab, var(--color-purple) 60%, transparent);
+    animation: agentic-orbit 18s linear infinite;
+  }
+}
+
+/* Scan-sweep highlight on hover — for cards */
+@utility card-agentic {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,
+      transparent 40%,
+      color-mix(in oklab, var(--color-cyan) 18%, transparent) 50%,
+      transparent 60%);
+    transform: translateX(-100%);
+    transition: transform 900ms ease;
+    pointer-events: none;
+  }
+  &:hover::after { transform: translateX(100%); }
+}
+
+/* Navigation link hover effect — subtle gradient underline + glow */
+@utility nav-link {
+  position: relative;
+  transition: color 200ms ease, transform 200ms ease, text-shadow 200ms ease;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: var(--hero-gradient);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 300ms ease;
+  }
+  &:hover {
+    color: var(--color-foreground);
+    transform: translateY(-1px);
+    text-shadow: 0 0 18px color-mix(in oklab, var(--color-cyan) 40%, transparent);
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link {
+    transition: none;
+  }
+  .nav-link::after {
+    transition: none;
+  }
+}
+
