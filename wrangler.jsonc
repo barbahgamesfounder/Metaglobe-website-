@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "metaglobe-website",
+  "name": "metaglobe",
   "main": ".output/server/index.mjs",
   "compatibility_date": "2024-09-19",
   "compatibility_flags": ["nodejs_compat"],
